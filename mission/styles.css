@@ -1,0 +1,47 @@
+body {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5em;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.15em;
+    letter-spacing: 2px;
+}
+
+h3 {
+    color: #006EB6;
+    margin: 0px;
+    font-size: 0.9em;
+    letter-spacing: 2.5px;
+}
+
+div {
+    padding-top: 30px;
+}
+
+header {
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.list_header {
+    font-style: italic;
+}
+
+li {
+    padding-bottom: 20px;
+}
+
+img {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 40px;
+}
