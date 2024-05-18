@@ -10,10 +10,14 @@
     <title>Cool Pics 📷</title>
 </head>
 <body>
+    <div id="viewer">
+        <button class="close-viewer">X</button>
+        <img src="norris-full.jpeg" alt="alt description" class="img-viewer">
+    </div>
     <header>
         <h1>Cool Pics 📷</h1>
         <nav>
-            <h3 id="menu-title">Menu</h3>
+            <button id="menu-title" onclick="toggleMenu()">Menu</button>
             <div class="links">
                 <a href="">Home</a>
                 <a href="">People</a>
