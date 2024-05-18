@@ -35,22 +35,22 @@ var imgList = document.querySelector('.gallery');
 var viewer = document.querySelector('#viewer');
 var imgViewer = document.querySelector('.img-viewer img');
 
-imgList.forEach(function(img) {
-    img.addEventListener('click', function() {
-        console.log('Image clicked: ', img.src);
-        openViewer(img.src);
-    });
-});
+// imgList.forEach(function(img) {
+//     img.addEventListener('click', function() {
+//         console.log('Image clicked: ', img.src);
+//         openViewer(img.src);
+//     });
+// });
 
 
-function changeImage(imageURL) {
-    imgViewer.src = imageURL;
-}
+// function changeImage(imageURL) {
+//     imgViewer.src = imageURL;
+// }
 
-function openViewer(imageURL) {
-    viewer.style.display = 'grid';
-    changeImage(imageURL);
-}
+// function openViewer(imageURL) {
+//     viewer.style.display = 'grid';
+//     changeImage(imageURL);
+// }
 
 function closeViewer() {
     viewer.style.display = 'none';
