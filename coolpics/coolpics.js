@@ -31,16 +31,48 @@ window.addEventListener('resize', function () {
     }
 })
 
-var imgList = document.querySelector('.gallery');
-var viewer = document.querySelector('#viewer');
-var imgViewer = document.querySelector('.img-viewer img');
+function viewerTemplate(pic, alt) {
+    return `<div class="viewer">
+      <button class="close-viewer">X</button>
+      <img src="${pic}" alt="${alt}">
+      </div>`;
+  }
 
-// imgList.forEach(function(img) {
-//     img.addEventListener('click', function() {
-//         console.log('Image clicked: ', img.src);
-//         openViewer(img.src);
-//     });
-// });
+function viewHandler(event) {
+	// create a variable to hold the element that was clicked on from event.target
+    var imgViewer = document.querySelector('.img-viewer img');
+    imgViewer.style.display = 'grid';
+    var imgList = document.querySelectorAll('.gallery');
+    imgList.forEach(function(img) {
+    img.addEventListener('click', function() {
+        var src = $(event.target).src();
+        src = src.split('-');
+        src = src[0] + '-full.jpeg';
+        var alt = $(event.target).alt();
+        var htmltoinsert = viewerTemplate(src, alt);
+        document.body.element.insertAdjacentHTML("afterbegin", htmltoinsert)
+    });
+    });
+
+
+	// get the src attribute from that element and 'split' it on the "-"
+
+	// construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
+
+	// insert the viewerTemplate into the top of the body element
+	// (element.insertAdjacentHTML("afterbegin", htmltoinsert))
+
+	// add a listener to the close button (X) that calls a function called closeViewer when clicked
+    var closeButton = document.querySelector('button');
+    closeButton.addEventListener('click', function() {
+        closeViewer();
+    })
+}
+
+// 
+// var viewer = document.querySelector('#viewer');
+// var imgViewer = document.querySelector('.img-viewer img');
+
 
 
 // function changeImage(imageURL) {
@@ -53,5 +85,6 @@ var imgViewer = document.querySelector('.img-viewer img');
 // }
 
 function closeViewer() {
-    viewer.style.display = 'none';
+    var imgViewer = document.querySelector('.img-viewer img');
+    imgViewer.style.display = 'none';
 }
