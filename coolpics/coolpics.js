@@ -29,31 +29,26 @@ window.addEventListener('resize', function () {
     } else {
         hideMenu();
     }
-})
+});
 
 function viewerTemplate(pic, alt) {
     return `<div class="viewer">
-      <button class="close-viewer">X</button>
-      <img src="${pic}" alt="${alt}">
+      <button class="close-viewer" onclick="closeViewer()">X</button>
+      <img src="${pic}" alt="${alt}" class="img-viewer">     
       </div>`;
-  }
+  };
+  
 
 function viewHandler(event) {
 	// create a variable to hold the element that was clicked on from event.target
-    var imgViewer = document.querySelector('.img-viewer img');
-    imgViewer.style.display = 'grid';
-    var imgList = document.querySelectorAll('.gallery');
-    imgList.forEach(function(img) {
-    img.addEventListener('click', function() {
-        var src = $(event.target).src();
-        src = src.split('-');
-        src = src[0] + '-full.jpeg';
-        var alt = $(event.target).alt();
-        var htmltoinsert = viewerTemplate(src, alt);
-        document.body.element.insertAdjacentHTML("afterbegin", htmltoinsert)
-    });
-    });
+    var src = event.src;
+    src = src.split('-');
+    src = src[0] + '-full.jpeg';
+    var alt = event.alt;
+    var htmltoinsert = viewerTemplate(src, alt);
+    document.body.insertAdjacentHTML("beforebegin", htmltoinsert);
 
+    
 
 	// get the src attribute from that element and 'split' it on the "-"
 
@@ -63,10 +58,7 @@ function viewHandler(event) {
 	// (element.insertAdjacentHTML("afterbegin", htmltoinsert))
 
 	// add a listener to the close button (X) that calls a function called closeViewer when clicked
-    var closeButton = document.querySelector('button');
-    closeButton.addEventListener('click', function() {
-        closeViewer();
-    })
+    
 }
 
 // 
@@ -85,6 +77,8 @@ function viewHandler(event) {
 // }
 
 function closeViewer() {
-    var imgViewer = document.querySelector('.img-viewer img');
-    imgViewer.style.display = 'none';
+    var viewer = document.querySelector(".viewer");
+    if (viewer) {
+        viewer.remove()
+    }
 }
