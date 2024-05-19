@@ -24,7 +24,7 @@ function hideMenu() {
 }
 
 window.addEventListener('resize', function () {
-    if (this.window.innerWidth >= 700) {
+    if (this.window.innerWidth >= 800) {
         showMenu();
     } else {
         hideMenu();
