@@ -1,0 +1,89 @@
+form {
+    display: grid;
+    width: 900px;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+fieldset {
+    display: grid;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0.02);
+}
+
+input {
+    padding: 2px;
+    margin: 2px;
+}
+
+#frontcard {
+    grid-template-columns: 80% 20%;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    z-index: 2;
+    gap:10px;
+    padding: 20px;
+    border: none;
+    background-color: lightgray;
+    border-radius: 10px;
+    text-transform: uppercase;
+    height: 280px;
+}
+
+label {
+    margin-bottom: 2px;
+}
+
+#total {
+    justify-content: left;
+    margin-top: 20px;
+}
+
+#backcard {
+    display: grid;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    z-index: 1;
+    background-color: lightgray;
+    border: none;
+    border-radius: 10px;
+    grid-template-columns: 80% 20%;
+    padding: 0px;
+    padding-top: 20px;
+    height: 280px;
+}
+
+#strip{
+    background-color: darkslategray;
+    grid-column: 1/3;
+    height: 50px;
+    
+}
+
+#cvc-cvvArea {
+    grid-column: 2/3;
+    width: 20px;
+    margin-top: 50px;
+}
+
+#cvc-cvv {
+    width: 50px;
+}
+
+#card-number {
+    grid-column: 1/3;
+}
+
+#expiration {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-gap: 10px;
+}
+
+button {
+    grid-row: 4/5;
+    grid-column: 3/4;
+    border-radius: 5px;
+    padding: 7px;
+    margin-top: 20px;
+    width: 100px;
+    justify-self: right;
+}
