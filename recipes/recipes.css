@@ -100,9 +100,9 @@ p {
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
-    width: 40%;
-    margin: 0 auto;
+    width: 200px;
     margin-top: 50px;
+    margin: 0 auto;
 }
 
 .social a {
@@ -157,9 +157,16 @@ footer {
 
     .leftsection {
         padding: 20px;
+        flex-direction: row;
+        justify-content: left;
+        flex: 1;
+        text-align: left;
     }
     
     .social {
         justify-self: right;
+        margin-top: 0px;
+        margin: 0;
     }
+
 }
