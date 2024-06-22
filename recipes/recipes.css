@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+:root {
+--primary-color: #1B98E0;
+--secondary-color: #59c3c3;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: "Amatic SC";
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: var(--secondary-font);
+    color: var(--text-dark);
+    
+}
+
+h2 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.logo {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header {
+    border-bottom: 1px solid gray;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.logo img {
+    width: 33%;
+    height: 30%;
+}
+
+.logo h1 {
+    float: right;
+}
+
+.search {
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 1px solid var(--text-dark);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.search input {
+    flex: 1;
+    font-size: 1.1em;
+}
+
+h3 {
+    padding: 5px;
+    border: 1px solid var(--text-dark);
+    display: inline-flex;
+    margin-top: 10px;
+}
+
+button {
+    max-width: 10%;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--text-dark);
+}
+
+.recipe {
+    border: 2px solid var(--text-dark);
+    border-radius: 10px;
+    padding: 25px;
+    padding-bottom: 50px;
+}
+
+p {
+    display: none;
+}
+
+.social {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.social a {
+    flex: 1 1 auto;
+    max-width: 100px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+.leftsection {
+    text-align: center;
+    color: var(--secondary-color);
+
+}
+
+.leftsection a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .recipe {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .recipe p {
+        display: block;
+    }
+
+    .recipe img {
+        max-width: 50%;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+        flex: 1;
+    }
+
+    .recipe section {
+        float: right;
+        max-width: 45%;
+      }
+
+    footer {
+        flex-direction: row-reverse;
+    }
+
+    .leftsection {
+        padding: 20px;
+    }
+    
+    .social {
+        justify-self: right;
+    }
+}
