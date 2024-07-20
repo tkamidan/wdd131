@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="This is a website that talks all about Discs in Disc Golf.">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./main.js"></script>
+    <title>ThrowAndGrow | Home</title>
 </head>
 <body>
-    
+    <header>
+        <div class="inner-header">
+            <a href="./index.html"><img src="./images/ThrowAndGrow_transparent.png" alt="ThrowAndGrow"></a>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./discs.html">Discs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="mainPicture"></div>
+    <main id="index-main">
+        <img src="./images/discgolfdiscs.webp" alt="Disc Golf Discs">
+        <div class="text-section">
+            <p>This is the website for everything disc golf related. Whether you are new or whether you have been playing for many years this is the place to be.</p>
+            <p>Click here to see what kind of discs are the best kind for you.</p>
+            <div class="center-button">
+                <a href="./discs.html" class="discs-link">Discs</a>
+            </div>
+        </div>
+        <div class="text-section">
+            <!-- Form will go here -->
+            <h2>Contact Us</h2>
+            <p>We would love to talk to each one of our site users to see if they have any questions and would love to respond to them. Down below is a form that will help you to be able to ask any questions about disc golf and get answers. Just enter in your email and then your question.</p>
+            <form>
+                    <label for="email">Email:</label>
+                    <br>
+                    <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                    <br>
+                    <br>
+                    <label for="message">Message:</label><br>
+                    <textarea name="message" id="message" rows="4" cols="50" placeholder="Enter your message/question" required></textarea>
+                    <br>
+                <div>
+                    <input type="submit" id="submit-button" value="Send">
+                </div>
+            </form>
+            <div id="success"></div>
+        </div>
+        <img src="./images/field.webp" alt="Field">
+    </main>
+    <footer>
+        <p>&copy; 2024 ThrowAndGrow Inc.</p>
+    </footer>
 </body>
 </html>
