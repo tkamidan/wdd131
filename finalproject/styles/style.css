@@ -167,6 +167,14 @@ form div {
     color: var(--accent2-color);
 }
 
+#title {
+    overflow: hidden;
+}
+
+#discs-main {
+    overflow: hidden;
+}
+
 .disc-section {
     display: grid;
     grid-template-columns: 50% 50%;
